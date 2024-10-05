@@ -27,15 +27,14 @@
         }
         .banner-container {
             position: relative; /* Nécessaire pour le positionnement absolu du dégradé */
-            width: 1080px; /* Largeur de la bannière */
+            width: 972px; /* Réduire la largeur de 10% par rapport à 1080px */
             height: auto; /* Hauteur automatique pour garder le ratio */
         }
         .banner {
             width: 100%; /* La bannière remplit le conteneur */
             height: auto; /* Hauteur automatique pour garder le ratio */
         }
-        .banner::before {
-            content: "";
+        .overlay {
             position: absolute;
             top: 0;
             left: 0;
@@ -53,6 +52,7 @@
     </div>
     <div class="banner-container">
         <img src="banner.png" alt="Bannière" class="banner">
+        <div class="overlay"></div> <!-- Dégradé de transparence ajouté ici -->
     </div>
 </body>
 </html>
