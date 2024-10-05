@@ -18,12 +18,34 @@
             margin: 0;
             color: red; /* Texte en rouge */
             font-family: Impact;
+            text-decoration: none; /* Pas de soulignement */
+            display: block; /* Pour le rendre cliquable comme un bouton */
+            padding: 10px 20px; /* Espacement à l'intérieur du bouton */
+            background-color: #1B1B1B; /* Couleur de fond pour correspondre à la page */
+            border: 2px solid red; /* Bordure rouge */
+            border-radius: 5px; /* Coins arrondis */
+            transition: background-color 0.3s, color 0.3s; /* Animation de transition */
+        }
+        .OnTop:hover {
+            background-color: red; /* Change le fond au survol */
+            color: white; /* Change la couleur du texte au survol */
         }
         .Subtitle {
             font-size: 20px;
             margin: 0;
             color: #dfdfdf; /* Couleur du sous-titre */
             font-family: Impact;
+            text-decoration: none; /* Pas de soulignement */
+            display: block; /* Pour le rendre cliquable comme un bouton */
+            padding: 5px 10px; /* Espacement à l'intérieur du bouton */
+            background-color: #1B1B1B; /* Couleur de fond pour correspondre à la page */
+            border: 1px solid #dfdfdf; /* Bordure pour le sous-titre */
+            border-radius: 5px; /* Coins arrondis */
+            transition: background-color 0.3s, color 0.3s; /* Animation de transition */
+        }
+        .Subtitle:hover {
+            background-color: #dfdfdf; /* Change le fond au survol */
+            color: black; /* Change la couleur du texte au survol */
         }
         .banner-container {
             position: relative; /* Nécessaire pour le positionnement absolu du dégradé */
@@ -47,8 +69,8 @@
 </head>
 <body>
     <div>
-        <h1 class="OnTop">On Top</h1>
-        <h2 class="Subtitle">custom minecraft</h2>
+        <a href="https://arthurontop.github.io/" class="OnTop">On Top</a>
+        <a href="https://arthurontop.github.io/" class="Subtitle">custom minecraft</a>
     </div>
     <div class="banner-container">
         <img src="banner.png" alt="Bannière" class="banner">
