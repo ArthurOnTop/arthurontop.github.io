@@ -25,9 +25,24 @@
             color: #dfdfdf;
             font-family: Impact;
         }
-        .banner {
-            width: 1116px; /* Largeur de la bannière réagrandie */
+        .banner-container {
+            position: relative; /* Nécessaire pour le positionnement absolu du dégradé */
+            width: 1080px; /* Largeur de la bannière */
             height: auto; /* Hauteur automatique pour garder le ratio */
+        }
+        .banner {
+            width: 100%; /* La bannière remplit le conteneur */
+            height: auto; /* Hauteur automatique pour garder le ratio */
+        }
+        .banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40%; /* Largeur du dégradé */
+            height: 100%; /* Remplit toute la hauteur de la bannière */
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Dégradé de noir vers transparent */
+            pointer-events: none; /* Pour que les événements de la souris passent à travers */
         }
     </style>
 </head>
@@ -36,6 +51,8 @@
         <h1 class="OnTop">On Top</h1>
         <h2 class="Subtitle">custom minecraft versions</h2>
     </div>
-    <img src="banner.png" alt="Bannière" class="banner">
+    <div class="banner-container">
+        <img src="banner.png" alt="Bannière" class="banner">
+    </div>
 </body>
 </html>
