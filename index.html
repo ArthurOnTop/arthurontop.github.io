@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>On Top</title>
     <style>
-        .banner {
-            width: 90%; /* La largeur de l'image est de 90% de la largeur de la page */
-            margin-left: 10%; /* Écarte l'image de 10% à gauche */
-            display: block; /* Assure que l'image se comporte comme un bloc */
-            }
-        .rectangle-arrondi {
-            width: 300px; /* Largeur du rectangle */
-            height: 150px; /* Hauteur du rectangle */
-            background-color: #131314; /* Couleur de fond */
-            border: 2px solid #2c3e50; /* Bordure */
-            border-radius: 20px; /* Rayon des coins arrondis */
+        .header {
+            display: flex; /* Utilise Flexbox pour aligner le titre et la bannière */
+            align-items: center; /* Centre verticalement les éléments */
+            justify-content: space-between; /* Écarte les éléments */
+            padding: 0 10%; /* Ajoute du padding à gauche et à droite */
         }
+
+        .banner {
+            width: 90%; /* Largeur de la bannière */
+        }
+        
         body {
             background-color: #1F1F1F;
             color: white;
