@@ -3,67 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>On Top</title>
+    <title>Ma Page Web</title>
     <style>
-        .header {
-            display: flex; /* Utilise Flexbox pour aligner le titre et la bannière */
-            align-items: center; /* Centre verticalement les éléments */
-            justify-content: space-between; /* Écarte les éléments */
-            padding: 0 10%; /* Ajoute du padding à gauche et à droite */
-        }
-
-        .banner {
-            width: 90%; /* Largeur de la bannière */
-        }
-        
         body {
-            background-color: #1F1F1F;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-
-        .pvp-button {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 40px;
-            cursor: pointer;
-            text-decoration: none;
-            border-radius: 10px;
-            font-family: Impact;
-            margin-left: 50px;
-        }
-
-        .red-button:hover {
-            background-color: darkred;
+            margin: 0;
+            display: flex;
+            align-items: flex-start; /* Aligne les éléments en haut */
+            justify-content: space-between; /* Espace entre le titre et la bannière */
+            height: 100vh; /* Remplit toute la hauteur de la fenêtre */
+            background-color: #000; /* Arrière-plan noir pour contraster avec le texte */
         }
         .OnTop {
-        font-size: 50px;
-        margin: 0;
-        color: red; /* Texte en rouge */
-        font-family: Impact;
+            font-size: 50px;
+            margin: 0;
+            color: red; /* Texte en rouge */
+            font-family: Impact;
         }
         .Subtitle {
-        font-size: 12px;
-        margin: 0;
-        color: #dfdfdf;
-        font-family: Impact;
+            font-size: 12px;
+            margin: 0;
+            color: #dfdfdf;
+            font-family: Impact;
+        }
+        .banner {
+            width: 300px; /* Largeur de la bannière, ajuste selon besoin */
+            height: auto; /* Hauteur automatique pour garder le ratio */
         }
     </style>
 </head>
 <body>
-     <!-- Conteneur pour le titre et la bannière -->
-    <div class="header">
-        <!-- Titre "abc" affiché à gauche -->
-        <p class="OnTop">On Top</p>
-        <p class="Subtitle">Custom Minecraft Versions</p>
-        <!-- Image bannière collée à droite -->
-        <img src="banner.png" alt="Bannière" class="banner">
+    <div>
+        <h1 class="OnTop">Titre de la Page</h1>
+        <h2 class="Subtitle">Sous-titre de la Page</h2>
     </div>
-    <br>
-    <!-- Bouton rouge qui redirige vers chatgpt.com -->
-    <a href="https://chatgpt.com/" class="pvp-button">PvP</a>
-
+    <img src="banner.png" alt="Bannière" class="banner">
 </body>
 </html>
