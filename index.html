@@ -33,16 +33,15 @@
         .banner {
             width: 100%; /* La bannière remplit le conteneur */
             height: auto; /* Hauteur automatique pour garder le ratio */
-            filter: brightness(0.8) blur(2px); /* Applique une luminosité réduite et un flou léger */
         }
         .banner::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
-            width: 20%; /* Largeur du dégradé - seulement 20 % */
+            width: 5%; /* Largeur du dégradé - seulement 5 % */
             height: 100%; /* Remplit toute la hauteur de la bannière */
-            background: linear-gradient(to right, rgba(27, 27, 27, 1), rgba(27, 27, 27, 0)); /* Dégradé de opaque à transparent */
+            background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Dégradé de opaque à transparent */
             pointer-events: none; /* Pour que les événements de la souris passent à travers */
         }
     </style>
