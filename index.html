@@ -16,39 +16,35 @@
         .container {
             display: flex; /* Utilise flexbox pour le conteneur des boutons */
             flex-direction: column; /* Colonne pour les titres */
-            width: 10%; /* Largeur de 10% pour les boutons */
+            width: 20%; /* Largeur de 20% pour les boutons */
             padding: 0; /* Enlève le padding par défaut */
+        }
+
+        .OnTop, .Subtitle {
+            font-family: Impact, sans-serif;
+            text-decoration: none; /* Pas de soulignement */
+            display: block; /* Prend toute la largeur disponible */
+            padding: 0.5rem 1rem; /* Espacement interne réduit */
+            width: 100%; /* Prend toute la largeur du conteneur parent */
+            box-sizing: border-box; /* Inclut le padding dans la largeur */
+            cursor: pointer; /* Change le curseur au survol */
+            background-color: transparent; /* Fond transparent */
+            border: none; /* Pas de bordure visible */
         }
 
         .OnTop {
             font-size: 3vw; /* Taille de la police adaptative */
             color: red; /* Texte en rouge */
-            font-family: Impact, sans-serif;
-            text-decoration: none; /* Pas de soulignement */
-            display: block; /* Prend toute la largeur disponible */
-            padding: 0.5rem 1rem; /* Espacement interne réduit */
-            background-color: transparent; /* Fond transparent */
-            width: 100%; /* Prend toute la largeur du conteneur parent */
-            box-sizing: border-box; /* Inclut le padding dans la largeur */
-            cursor: pointer; /* Change le curseur au survol */
         }
 
         .Subtitle {
             font-size: 1.5vw; /* Taille de la police adaptative */
             color: #dfdfdf; /* Couleur du sous-titre */
-            font-family: Impact, sans-serif;
-            text-decoration: none; /* Pas de soulignement */
-            display: block; /* Prend toute la largeur disponible */
-            padding: 0.25rem 1rem; /* Espacement interne réduit */
-            background-color: transparent; /* Fond transparent */
-            width: 100%; /* Prend toute la largeur du conteneur parent */
-            box-sizing: border-box; /* Inclut le padding dans la largeur */
             text-indent: -0.5rem; /* Décale légèrement le texte vers la gauche */
-            cursor: pointer; /* Change le curseur au survol */
         }
 
         .banner {
-            width: 90%; /* Largeur de la bannière (remplit le reste de la page) */
+            width: 80%; /* Largeur de la bannière (remplit le reste de la page) */
             height: 8.5vh; /* Hauteur totale de la bannière */
             background-image: url('banner.png'); /* Chemin de l'image de la bannière */
             background-size: cover; /* Couvre toute la largeur et la hauteur */
