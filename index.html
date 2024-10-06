@@ -5,44 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ma Page Web Adaptative</title>
     <style>
+        /* Style global du corps */
         body {
             margin: 0;
             display: flex;
-            flex-direction: row; /* Mise en page en ligne */
+            flex-direction: row; /* Disposition en ligne */
             align-items: flex-start; /* Aligne les éléments en haut */
-            justify-content: space-between; /* Espace entre le titre et la bannière */
+            justify-content: space-between; /* Espace entre le conteneur des boutons et la bannière */
             height: 100vh; /* Remplit toute la hauteur de la fenêtre */
             background-color: #1B1B1B; /* Couleur de fond */
+            padding: 2vw; /* Ajoute un peu d'espacement autour du contenu */
+            box-sizing: border-box; /* Inclut le padding dans les dimensions des éléments */
         }
 
-        /* Bouton pour le titre principal */
+        /* Conteneur des boutons */
+        .buttons-container {
+            display: flex;
+            flex-direction: column; /* Empile les boutons verticalement */
+            align-items: flex-start; /* Aligne les boutons à gauche */
+            gap: 1rem; /* Espace entre les boutons */
+            max-width: 20vw; /* Limite la largeur maximale des boutons */
+        }
+
+        /* Style du bouton "On Top" */
         .OnTop {
-            font-size: 5vw; /* La taille du texte s'adapte à la largeur de la fenêtre */
-            margin: 0;
+            font-size: 3vw; /* Taille de la police adaptative */
             color: red; /* Texte en rouge */
-            font-family: Impact;
-            background-color: transparent; /* Pas de couleur de fond */
-            border: none; /* Pas de bordure visible */
-            cursor: pointer;
+            font-family: Impact, sans-serif;
+            text-decoration: none; /* Pas de soulignement */
+            display: block; /* Prend toute la largeur disponible */
+            padding: 0.5rem 1rem; /* Espacement interne réduit */
+            background-color: transparent; /* Fond transparent */
+            width: 100%; /* Prend toute la largeur du conteneur parent */
+            box-sizing: border-box; /* Inclut le padding dans la largeur */
+            cursor: pointer; /* Change le curseur au survol */
         }
 
-        /* Bouton pour le sous-titre */
+        /* Style du bouton "custom minecraft" */
         .Subtitle {
-            font-size: 2.5vw; /* La taille du texte s'adapte à la largeur de la fenêtre */
-            margin: 0;
+            font-size: 1.5vw; /* Taille de la police adaptative */
             color: #dfdfdf; /* Couleur du sous-titre */
-            font-family: Impact;
-            background-color: transparent; /* Pas de couleur de fond */
-            border: none; /* Pas de bordure visible */
-            cursor: pointer;
-            margin-top: -1rem; /* Rapproche le sous-titre du titre principal */
-            padding-left: 2vw; /* Décale le texte légèrement vers la droite sans espaces */
+            font-family: Impact, sans-serif;
+            text-decoration: none; /* Pas de soulignement */
+            display: block; /* Prend toute la largeur disponible */
+            padding: 0.25rem 1rem; /* Espacement interne réduit */
+            background-color: transparent; /* Fond transparent */
+            width: 100%; /* Prend toute la largeur du conteneur parent */
+            box-sizing: border-box; /* Inclut le padding dans la largeur */
+            text-indent: -0.5rem; /* Décale légèrement le texte vers la gauche */
+            cursor: pointer; /* Change le curseur au survol */
         }
 
-        /* Conteneur pour la bannière */
+        /* Supprimer les effets de survol */
+        .OnTop:hover,
+        .Subtitle:hover {
+            background-color: transparent; /* Aucun changement de fond au survol */
+            color: inherit; /* Conserve la couleur du texte */
+        }
+
+        /* Conteneur de la bannière */
         .banner-container {
             position: relative; /* Nécessaire pour le positionnement absolu du dégradé */
-            width: 55vw; /* Largeur en fonction de l'écran */
+            width: 198vw; /* Augmente la largeur de 80% par rapport à 111.3vw */
+            max-width: 1200px; /* Limite la largeur maximale pour éviter des tailles excessives */
             height: auto; /* Hauteur automatique pour garder le ratio */
         }
 
@@ -50,6 +75,7 @@
         .banner {
             width: 100%; /* La bannière remplit le conteneur */
             height: auto; /* Hauteur automatique pour garder le ratio */
+            max-width: 100%; /* Assure que l'image ne dépasse pas le conteneur */
         }
 
         /* Superposition du dégradé */
@@ -62,13 +88,40 @@
             background: linear-gradient(to right, rgba(27, 27, 27, 1), rgba(27, 27, 27, 0)); /* Dégradé de opaque à transparent */
             pointer-events: none; /* Pour que les événements de la souris passent à travers */
         }
+
+        /* Media Queries pour une meilleure réactivité */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column; /* Passe en disposition colonne sur petits écrans */
+                align-items: center; /* Centre les éléments horizontalement */
+            }
+
+            .buttons-container {
+                max-width: 80vw; /* Ajuste la largeur maximale des boutons */
+                align-items: center; /* Centre les boutons */
+            }
+
+            .banner-container {
+                width: 100vw; /* Prend toute la largeur de l'écran */
+                max-width: none; /* Supprime la limite de largeur maximale */
+            }
+
+            .OnTop {
+                font-size: 6vw; /* Augmente la taille de la police pour petits écrans */
+            }
+
+            .Subtitle {
+                font-size: 3vw; /* Augmente la taille de la police pour petits écrans */
+                text-indent: 0; /* Supprime le décalage du texte */
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Bouton pour le titre principal, lien vers le site -->
-    <div>
-        <button class="OnTop" onclick="window.location.href='https://arthurontop.github.io/'">On Top</button>
-        <button class="Subtitle" onclick="window.location.href='https://arthurontop.github.io/'">custom minecraft</button>
+    <!-- Conteneur des boutons -->
+    <div class="buttons-container">
+        <a href="https://arthurontop.github.io/" class="OnTop">On Top</a>
+        <a href="https://arthurontop.github.io/" class="Subtitle">custom minecraft</a>
     </div>
 
     <!-- Conteneur de la bannière avec superposition du dégradé -->
