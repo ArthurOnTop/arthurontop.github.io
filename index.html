@@ -9,11 +9,13 @@
         body {
             margin: 0;
             display: flex;
-            flex-direction: column; /* Empile verticalement les éléments */
-            align-items: flex-start; /* Aligne les boutons à gauche */
+            flex-direction: column; /* Disposition en colonne */
+            align-items: flex-start; /* Aligne les éléments à gauche */
+            height: 100vh; /* Remplit toute la hauteur de la fenêtre */
             background-color: #1B1B1B; /* Couleur de fond */
-            height: 100vh; /* Prend toute la hauteur de la fenêtre */
+            padding: 2vw; /* Ajoute un peu d'espacement autour du contenu */
             box-sizing: border-box; /* Inclut le padding dans les dimensions des éléments */
+            position: relative; /* Nécessaire pour le positionnement absolu de la bannière */
         }
 
         /* Conteneur des boutons */
@@ -22,8 +24,7 @@
             flex-direction: column; /* Empile les boutons verticalement */
             align-items: flex-start; /* Aligne les boutons à gauche */
             gap: 1rem; /* Espace entre les boutons */
-            margin-left: 2vw; /* Décale les boutons légèrement vers la droite */
-            margin-top: 2vw; /* Décale les boutons vers le bas */
+            max-width: 20vw; /* Limite la largeur maximale des boutons */
         }
 
         /* Style du bouton "On Top" */
@@ -37,6 +38,7 @@
             background-color: transparent; /* Fond transparent */
             width: 100%; /* Prend toute la largeur du conteneur parent */
             box-sizing: border-box; /* Inclut le padding dans la largeur */
+            cursor: pointer; /* Change le curseur au survol */
         }
 
         /* Style du bouton "custom minecraft" */
@@ -51,6 +53,7 @@
             width: 100%; /* Prend toute la largeur du conteneur parent */
             box-sizing: border-box; /* Inclut le padding dans la largeur */
             text-indent: -0.5rem; /* Décale légèrement le texte vers la gauche */
+            cursor: pointer; /* Change le curseur au survol */
         }
 
         /* Supprimer les effets de survol */
@@ -62,10 +65,10 @@
 
         /* Conteneur de la bannière */
         .banner-container {
-            position: absolute; /* Position absolue pour fixer la bannière */
-            top: 0; /* Colle la bannière en haut */
-            right: 0; /* Colle la bannière à droite */
-            width: 207vw; /* Largeur augmentée de 80% */
+            position: absolute; /* Permet de positionner la bannière précisément */
+            top: 0; /* Colle la bannière au haut de la page */
+            right: 0; /* Colle la bannière au bord droit de la page */
+            width: 198vw; /* Augmente la largeur de 80% */
             height: auto; /* Hauteur automatique pour garder le ratio */
         }
 
@@ -90,7 +93,8 @@
         /* Media Queries pour une meilleure réactivité */
         @media (max-width: 768px) {
             body {
-                align-items: center; /* Centre les éléments horizontalement sur petits écrans */
+                flex-direction: column; /* Passe en disposition colonne sur petits écrans */
+                align-items: center; /* Centre les éléments horizontalement */
             }
 
             .buttons-container {
@@ -99,15 +103,17 @@
             }
 
             .banner-container {
-                width: 100vw; /* Ajuste la taille de la bannière sur petits écrans */
+                width: 100vw; /* Prend toute la largeur de l'écran */
+                max-width: none; /* Supprime la limite de largeur maximale */
             }
 
             .OnTop {
-                font-size: 6vw; /* Augmente la taille de la police sur petits écrans */
+                font-size: 6vw; /* Augmente la taille de la police pour petits écrans */
             }
 
             .Subtitle {
                 font-size: 3vw; /* Augmente la taille de la police pour petits écrans */
+                text-indent: 0; /* Supprime le décalage du texte */
             }
         }
     </style>
