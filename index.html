@@ -53,11 +53,13 @@
 
         /* Rectangle esthétique sous la bannière */
         .rectangle {
-            width: calc(80% * 1.05); /* Même largeur que la bannière */
+            width: calc(80% * 1.05 - 20px); /* Réduit la largeur du rectangle */
             height: 100%; /* Occupe tout l'espace restant en bas */
             background-color: #131314; /* Couleur du rectangle */
             border-radius: 20px 20px 0 0; /* Bords arrondis en haut */
             margin-left: auto; /* Aligné à droite, en dessous de la bannière */
+            margin-top: -20px; /* Décale légèrement le rectangle vers le haut */
+            margin-right: 10px; /* Décale légèrement le rectangle à gauche */
         }
 
     </style>
