@@ -3,53 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma Page Web</title>
+    <title>Ma Page Web Adaptative</title>
     <style>
         body {
             margin: 0;
             display: flex;
+            flex-direction: row; /* Mise en page en ligne */
             align-items: flex-start; /* Aligne les éléments en haut */
             justify-content: space-between; /* Espace entre le titre et la bannière */
             height: 100vh; /* Remplit toute la hauteur de la fenêtre */
-            background-color: #1B1B1B; /* Couleur de fond mise à jour */
+            background-color: #1B1B1B; /* Couleur de fond */
         }
+
+        /* Bouton pour le titre principal */
         .OnTop {
-            font-size: 55px;
+            font-size: 5vw; /* La taille du texte s'adapte à la largeur de la fenêtre */
             margin: 0;
             color: red; /* Texte en rouge */
             font-family: Impact;
-            text-decoration: none; /* Pas de soulignement */
-            display: inline-block; /* Pour le rendre cliquable comme un bouton */
-            padding: 5px 10px; /* Espacement réduit pour rapprocher les boutons */
-            background-color: transparent; /* Fond transparent */
-            line-height: 55px; /* Hauteur de ligne égale à la taille de la police */
+            background-color: transparent; /* Pas de couleur de fond */
+            border: none; /* Pas de bordure visible */
+            cursor: pointer;
         }
+
+        /* Bouton pour le sous-titre */
         .Subtitle {
-            font-size: 20px;
+            font-size: 2.5vw; /* La taille du texte s'adapte à la largeur de la fenêtre */
             margin: 0;
             color: #dfdfdf; /* Couleur du sous-titre */
             font-family: Impact;
-            text-decoration: none; /* Pas de soulignement */
-            display: inline-block; /* Pour le rendre cliquable comme un bouton */
-            padding: 2px 10px; /* Espacement réduit pour rapprocher les boutons */
-            background-color: transparent; /* Fond transparent */
-            text-indent: 2px; /* Décalage à gauche de 2px (5 fois moins) */
-            line-height: 20px; /* Hauteur de ligne égale à la taille de la police */
+            background-color: transparent; /* Pas de couleur de fond */
+            border: none; /* Pas de bordure visible */
+            cursor: pointer;
+            margin-top: -1rem; /* Rapproche le sous-titre du titre principal */
+            padding-left: 2vw; /* Décale le texte légèrement vers la droite sans espaces */
         }
+
+        /* Conteneur pour la bannière */
         .banner-container {
             position: relative; /* Nécessaire pour le positionnement absolu du dégradé */
-            width: 1202.69px; /* Largeur augmentée de 8% (1113.6px + 8%) */
+            width: 55vw; /* Largeur en fonction de l'écran */
             height: auto; /* Hauteur automatique pour garder le ratio */
         }
+
+        /* Style de la bannière */
         .banner {
             width: 100%; /* La bannière remplit le conteneur */
             height: auto; /* Hauteur automatique pour garder le ratio */
         }
+
+        /* Superposition du dégradé */
         .overlay {
             position: absolute;
             top: 0;
             left: 0;
-            width: 7%; /* Largeur du dégradé - 7 % */
+            width: 7%; /* Largeur du dégradé */
             height: 100%; /* Remplit toute la hauteur de la bannière */
             background: linear-gradient(to right, rgba(27, 27, 27, 1), rgba(27, 27, 27, 0)); /* Dégradé de opaque à transparent */
             pointer-events: none; /* Pour que les événements de la souris passent à travers */
@@ -57,10 +65,13 @@
     </style>
 </head>
 <body>
+    <!-- Bouton pour le titre principal, lien vers le site -->
     <div>
-        <a href="https://arthurontop.github.io/" class="OnTop">On Top</a>
-        <a href="https://arthurontop.github.io/" class="Subtitle">custom minecraft</a>
+        <button class="OnTop" onclick="window.location.href='https://arthurontop.github.io/'">On Top</button>
+        <button class="Subtitle" onclick="window.location.href='https://arthurontop.github.io/'">custom minecraft</button>
     </div>
+
+    <!-- Conteneur de la bannière avec superposition du dégradé -->
     <div class="banner-container">
         <img src="banner.png" alt="Bannière" class="banner">
         <div class="overlay"></div> <!-- Dégradé de transparence ajouté ici -->
