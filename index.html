@@ -39,9 +39,13 @@
         .banner {
             width: calc(80% * 1.05); /* Largeur de la bannière (remplit 4/5 de la page + 5%) */
             height: calc((80vw * 1.05) / 12); /* Hauteur de 1/12 de la largeur de la bannière */
-            background-image: url('banner.png'); /* Chemin de l'image de la bannière */
+            background-image: 
+                linear-gradient(to top, #1B1B1B, transparent 5%),  /* Dégradé de bas en haut (5% de la hauteur) */
+                linear-gradient(to right, #1B1B1B, transparent 5%), /* Dégradé de gauche à droite (5% de la largeur) */
+                url('banner.png'); /* Chemin de l'image de la bannière */
             background-size: cover; /* Couvre entièrement le conteneur */
             background-position: center; /* Centre l'image */
+            background-repeat: no-repeat; /* Empêche la répétition de l'image */
             margin-left: 0; /* Pas de marge à gauche */
             margin-top: 0; /* Pas de marge au-dessus de la bannière */
         }
