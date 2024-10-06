@@ -9,12 +9,14 @@
             margin: 0; /* Enlève les marges par défaut */
             height: 100vh; /* Prend toute la hauteur de la fenêtre */
             background-color: #1B1B1B; /* Couleur de fond */
-            display: flex; /* Flexbox pour organiser les éléments */
+            display: flex;
+            flex-direction: column; /* Permet d'empiler les éléments verticalement */
         }
 
         /* Conteneur du bouton */
         .container {
             width: 20%; /* Largeur du bouton */
+            display: inline-block; /* Affichage en ligne pour ne pas décaler la bannière */
         }
 
         /* Style du bouton */
@@ -24,13 +26,13 @@
             display: block;
             padding: 0;
             width: 100%;
-            height: calc((80vw * 1.05) / 12); /* Hauteur égale à celle de la bannière */
+            height: calc((80vw * 1.05) / 12); /* Hauteur égale à celle de l'image */
             box-sizing: border-box;
             cursor: pointer;
             background-color: transparent;
             border: none;
             text-align: center;
-            line-height: calc((80vw * 1.05) / 12);
+            line-height: calc((80vw * 1.05) / 12); /* Centre verticalement le texte */
             font-size: calc(1.5vw * 3.5);
             color: red;
         }
@@ -41,7 +43,7 @@
             height: calc((80vw * 1.05) / 12); /* Hauteur de 1/12 de la largeur de la bannière */
             background-image: 
                 linear-gradient(to top, #1B1B1B, transparent 40%), 
-                linear-gradient(to right, #1B1B1B, transparent 20%),
+                linear-gradient(to right, #1B1B1B, transparent 20%), 
                 url('banner.png'); /* Image de la bannière */
             background-size: cover;
             background-position: center;
@@ -49,25 +51,31 @@
             margin-left: auto; /* La bannière reste collée à droite */
         }
 
-        /* Rectangle esthétique */
+        /* Rectangle esthétique sous la bannière */
         .rectangle {
             width: calc(80% * 1.05); /* Même largeur que la bannière */
-            height: calc(100vh - (80vw * 1.05) / 12); /* Occupe le reste de la hauteur sous la bannière */
+            height: 100%; /* Occupe tout l'espace restant en bas */
             background-color: #131314; /* Couleur du rectangle */
             border-radius: 20px 20px 0 0; /* Bords arrondis en haut */
             margin-left: auto; /* Aligné à droite, en dessous de la bannière */
         }
+
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <a class="button OnTop" href="index.html">On Top</a> <!-- Bouton qui renvoie à la même page -->
+    <div style="display: flex; width: 100%; align-items: flex-start;">
+        <!-- Conteneur du bouton à gauche -->
+        <div class="container">
+            <a class="button OnTop" href="index.html">On Top</a> <!-- Bouton qui renvoie à la même page -->
+        </div>
+
+        <!-- Bannière à droite -->
+        <div class="banner"></div>
     </div>
 
-    <div class="banner"></div> <!-- Bannière à droite -->
-    
-    <div class="rectangle"></div> <!-- Rectangle esthétique en dessous de la bannière -->
+    <!-- Rectangle esthétique en dessous de la bannière -->
+    <div class="rectangle"></div>
 
 </body>
 </html>
