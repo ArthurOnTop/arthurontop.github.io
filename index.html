@@ -8,9 +8,16 @@
         body {
             margin: 0; /* Enlève les marges par défaut du body */
             display: flex; /* Utilise flexbox pour la mise en page */
+            flex-direction: row; /* Organise les éléments en ligne */
             height: 100vh; /* Prend toute la hauteur de la fenêtre */
-            flex-direction: column; /* Colonne pour les éléments en haut */
-            align-items: flex-start; /* Aligne les éléments à gauche */
+            background-color: #1B1B1B; /* Couleur de fond */
+        }
+
+        .container {
+            display: flex; /* Utilise flexbox pour le conteneur des boutons */
+            flex-direction: column; /* Colonne pour les titres */
+            width: 10%; /* Largeur de 10% pour les boutons */
+            padding: 0; /* Enlève le padding par défaut */
         }
 
         .OnTop {
@@ -41,21 +48,22 @@
         }
 
         .banner {
-            width: 90vw; /* Largeur de la bannière (9/10 de la page) */
-            height: 90px; /* Hauteur fixe de la bannière (ajuster selon l'image) */
+            width: 90%; /* Largeur de la bannière (remplit le reste de la page) */
+            height: 8.5vh; /* Hauteur totale de la bannière */
             background-image: url('banner.png'); /* Chemin de l'image de la bannière */
             background-size: cover; /* Couvre toute la largeur et la hauteur */
             background-position: center; /* Centre l'image */
-            align-self: flex-start; /* Aligne la bannière à gauche */
+            margin-left: 0; /* Pas de marge à gauche */
             margin-top: 0; /* Pas de marge au-dessus de la bannière */
-            margin-left: 10vw; /* Ajoute une marge à gauche pour centrer la bannière */
         }
     </style>
 </head>
 <body>
 
-    <button class="OnTop">Bouton Principal</button>
-    <button class="Subtitle">Sous-titre</button>
+    <div class="container">
+        <button class="OnTop">On Top</button>
+        <button class="Subtitle">Custom Minecraft</button>
+    </div>
     
     <div class="banner"></div> <!-- Bannière -->
 
