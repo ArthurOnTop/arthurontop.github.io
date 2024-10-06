@@ -17,6 +17,7 @@
             display: flex; /* Utilise flexbox pour le conteneur des boutons */
             width: 20%; /* Largeur de 20% pour les boutons */
             padding: 0; /* Enlève le padding par défaut */
+            align-items: flex-start; /* Aligne le contenu en haut du conteneur */
         }
 
         .button {
@@ -30,9 +31,9 @@
             background-color: transparent; /* Fond transparent */
             border: none; /* Pas de bordure visible */
             text-align: center; /* Centre le texte dans le bouton */
-            font-size: calc(1.5vw * 1.5); /* Augmente la taille de la police de 50% */
             height: calc((80vw * 1.05) / 11); /* Hauteur égale à celle de la bannière */
             line-height: calc((80vw * 1.05) / 11); /* Centre le texte verticalement */
+            font-size: calc(1.5vw * 2); /* Taille de police augmentée pour le texte dans le bouton */
         }
 
         .OnTop {
@@ -41,7 +42,6 @@
             display: flex; /* Utilise flexbox pour centrer le texte */
             justify-content: center; /* Centre horizontalement */
             align-items: center; /* Centre verticalement */
-            font-size: calc(1.5vw * 1.5); /* Taille de la police pour le texte "On Top" */
             flex-grow: 1; /* Permet au bouton de prendre tout l'espace disponible */
         }
 
