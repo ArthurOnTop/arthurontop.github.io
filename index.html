@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Web avec Boutons et Bannière</title>
+    <title>Page Web avec Bouton et Bannière</title>
     <style>
         body {
             margin: 0; /* Enlève les marges par défaut du body */
@@ -15,7 +15,6 @@
 
         .container {
             display: flex; /* Utilise flexbox pour le conteneur des boutons */
-            flex-direction: column; /* Colonne pour les titres */
             width: 20%; /* Largeur de 20% pour les boutons */
             padding: 0; /* Enlève le padding par défaut */
         }
@@ -24,25 +23,26 @@
             font-family: Impact, sans-serif;
             text-decoration: none; /* Pas de soulignement */
             display: block; /* Prend toute la largeur disponible */
-            padding: 0.5rem 1rem; /* Espacement interne réduit */
+            padding: 0; /* Pas d'espacement interne */
             width: 100%; /* Prend toute la largeur du conteneur parent */
             box-sizing: border-box; /* Inclut le padding dans la largeur */
             cursor: pointer; /* Change le curseur au survol */
             background-color: transparent; /* Fond transparent */
             border: none; /* Pas de bordure visible */
-            text-align: left; /* Aligne le texte à gauche */
-            font-size: 1.5vw; /* Taille de la police du bouton */
+            text-align: center; /* Centre le texte dans le bouton */
+            font-size: calc(1.5vw * 1.5); /* Augmente la taille de la police de 50% */
+            height: calc((80vw * 1.05) / 11); /* Hauteur égale à celle de la bannière */
+            line-height: calc((80vw * 1.05) / 11); /* Centre le texte verticalement */
         }
 
         .OnTop {
-            font-size: calc(1.5vw * 1.5); /* Augmente la taille de la police de 50% */
             color: red; /* Texte en rouge */
-        }
-
-        .Subtitle {
-            font-size: 1.5vw; /* Taille de la police adaptative */
-            color: #dfdfdf; /* Couleur du sous-titre */
-            text-indent: -0.5rem; /* Décale légèrement le texte vers la gauche */
+            height: 100%; /* Prend toute la hauteur du conteneur */
+            display: flex; /* Utilise flexbox pour centrer le texte */
+            justify-content: center; /* Centre horizontalement */
+            align-items: center; /* Centre verticalement */
+            font-size: calc(1.5vw * 1.5); /* Taille de la police pour le texte "On Top" */
+            flex-grow: 1; /* Permet au bouton de prendre tout l'espace disponible */
         }
 
         .banner {
@@ -60,7 +60,6 @@
 
     <div class="container">
         <a class="button OnTop" href="index.html">On Top</a> <!-- Renvoie à la même page -->
-        <a class="button Subtitle" href="index.html">Custom Minecraft</a> <!-- Renvoie à la même page -->
     </div>
     
     <div class="banner"></div> <!-- Bannière -->
