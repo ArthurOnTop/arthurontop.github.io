@@ -3,31 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma Page Web Adaptative</title>
+    <title>Page Web avec Boutons et Bannière</title>
     <style>
-        /* Style global du corps */
         body {
-            margin: 0;
-            display: flex;
-            flex-direction: column; /* Disposition en colonne */
+            margin: 0; /* Enlève les marges par défaut du body */
+            display: flex; /* Utilise flexbox pour la mise en page */
+            height: 100vh; /* Prend toute la hauteur de la fenêtre */
+            flex-direction: column; /* Colonne pour les éléments en haut */
             align-items: flex-start; /* Aligne les éléments à gauche */
-            height: 100vh; /* Remplit toute la hauteur de la fenêtre */
-            background-color: #1B1B1B; /* Couleur de fond */
-            padding: 2vw; /* Ajoute un peu d'espacement autour du contenu */
-            box-sizing: border-box; /* Inclut le padding dans les dimensions des éléments */
-            position: relative; /* Nécessaire pour le positionnement absolu de la bannière */
         }
 
-        /* Conteneur des boutons */
-        .buttons-container {
-            display: flex;
-            flex-direction: column; /* Empile les boutons verticalement */
-            align-items: flex-start; /* Aligne les boutons à gauche */
-            gap: 1rem; /* Espace entre les boutons */
-            max-width: 20vw; /* Limite la largeur maximale des boutons */
-        }
-
-        /* Style du bouton "On Top" */
         .OnTop {
             font-size: 3vw; /* Taille de la police adaptative */
             color: red; /* Texte en rouge */
@@ -41,7 +26,6 @@
             cursor: pointer; /* Change le curseur au survol */
         }
 
-        /* Style du bouton "custom minecraft" */
         .Subtitle {
             font-size: 1.5vw; /* Taille de la police adaptative */
             color: #dfdfdf; /* Couleur du sous-titre */
@@ -56,79 +40,24 @@
             cursor: pointer; /* Change le curseur au survol */
         }
 
-        /* Supprimer les effets de survol */
-        .OnTop:hover,
-        .Subtitle:hover {
-            background-color: transparent; /* Aucun changement de fond au survol */
-            color: inherit; /* Conserve la couleur du texte */
-        }
-
-        /* Conteneur de la bannière */
-        .banner-container {
-            position: absolute; /* Permet de positionner la bannière précisément */
-            top: 0; /* Colle la bannière au haut de la page */
-            right: 0; /* Colle la bannière au bord droit de la page */
-            width: 198vw; /* Augmente la largeur de 80% */
-            height: auto; /* Hauteur automatique pour garder le ratio */
-        }
-
-        /* Style de la bannière */
         .banner {
-            width: 100%; /* La bannière remplit le conteneur */
-            height: auto; /* Hauteur automatique pour garder le ratio */
-            max-width: 100%; /* Assure que l'image ne dépasse pas le conteneur */
-        }
-
-        /* Superposition du dégradé */
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 7%; /* Largeur du dégradé */
-            height: 100%; /* Remplit toute la hauteur de la bannière */
-            background: linear-gradient(to right, rgba(27, 27, 27, 1), rgba(27, 27, 27, 0)); /* Dégradé de opaque à transparent */
-            pointer-events: none; /* Pour que les événements de la souris passent à travers */
-        }
-
-        /* Media Queries pour une meilleure réactivité */
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column; /* Passe en disposition colonne sur petits écrans */
-                align-items: center; /* Centre les éléments horizontalement */
-            }
-
-            .buttons-container {
-                max-width: 80vw; /* Ajuste la largeur maximale des boutons */
-                align-items: center; /* Centre les boutons */
-            }
-
-            .banner-container {
-                width: 100vw; /* Prend toute la largeur de l'écran */
-                max-width: none; /* Supprime la limite de largeur maximale */
-            }
-
-            .OnTop {
-                font-size: 6vw; /* Augmente la taille de la police pour petits écrans */
-            }
-
-            .Subtitle {
-                font-size: 3vw; /* Augmente la taille de la police pour petits écrans */
-                text-indent: 0; /* Supprime le décalage du texte */
-            }
+            width: 90vw; /* Largeur de la bannière (9/10 de la page) */
+            height: 90px; /* Hauteur fixe de la bannière (ajuster selon l'image) */
+            background-image: url('banner.png'); /* Chemin de l'image de la bannière */
+            background-size: cover; /* Couvre toute la largeur et la hauteur */
+            background-position: center; /* Centre l'image */
+            align-self: flex-start; /* Aligne la bannière à gauche */
+            margin-top: 0; /* Pas de marge au-dessus de la bannière */
+            margin-left: 10vw; /* Ajoute une marge à gauche pour centrer la bannière */
         }
     </style>
 </head>
 <body>
-    <!-- Conteneur des boutons -->
-    <div class="buttons-container">
-        <a href="https://arthurontop.github.io/" class="OnTop">On Top</a>
-        <a href="https://arthurontop.github.io/" class="Subtitle">custom minecraft</a>
-    </div>
 
-    <!-- Conteneur de la bannière avec superposition du dégradé -->
-    <div class="banner-container">
-        <img src="banner.png" alt="Bannière" class="banner">
-        <div class="overlay"></div> <!-- Dégradé de transparence ajouté ici -->
-    </div>
+    <button class="OnTop">Bouton Principal</button>
+    <button class="Subtitle">Sous-titre</button>
+    
+    <div class="banner"></div> <!-- Bannière -->
+
 </body>
 </html>
