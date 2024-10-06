@@ -15,11 +15,12 @@
 
         /* Conteneur du bouton */
         .container {
-            width: 20%; /* Largeur du bouton */
+            width: 20%; /* Largeur du conteneur pour les boutons */
             display: inline-block; /* Affichage en ligne pour ne pas décaler la bannière */
+            margin: 10px; /* Ajoute une marge autour du conteneur */
         }
 
-        /* Style du bouton */
+        /* Style du bouton principal */
         .button {
             font-family: Impact, sans-serif;
             text-decoration: none;
@@ -34,7 +35,25 @@
             text-align: center;
             line-height: calc((80vw * 1.05) / 12); /* Centre verticalement le texte */
             font-size: calc(1.5vw * 3.5);
-            color: red;
+            color: red; /* Couleur du texte du bouton "On Top" */
+        }
+
+        /* Style du bouton "1.8.9 PVP" */
+        .button-small {
+            font-family: Impact, sans-serif;
+            text-decoration: none;
+            display: block;
+            padding: 0;
+            width: 100%;
+            height: calc((80vw * 1.05) / 12 / 1.2); /* Hauteur légèrement réduite */
+            box-sizing: border-box;
+            cursor: pointer;
+            background-color: red; /* Fond rouge */
+            border: none;
+            text-align: center;
+            line-height: calc((80vw * 1.05) / 12 / 1.2); /* Centre verticalement le texte */
+            font-size: calc(1.5vw * 3); /* Taille de police légèrement réduite */
+            color: white; /* Couleur du texte en blanc */
         }
 
         /* Bannière collée à droite */
@@ -55,14 +74,13 @@
         .rectangle {
             width: calc(80% * 1.05 - 50px); /* Réduit la largeur du rectangle légèrement */
             height: calc((80% * 1.05 - 50px) / 2.5 * 2.3 * 1.1 * 1.03); /* Hauteur augmentée de 1,03 fois */
-            background-color: #131314; /* Couleur modifiée du rectangle */
+            background-color: #303134; /* Couleur du rectangle */
             border-radius: 20px 20px 20px 20px; /* Bords arrondis en haut et en bas */
             margin-left: auto; /* Collé à droite */
             margin-top: 10px; /* Réduction de la marge entre le rectangle et la bannière */
             margin-right: 10px; /* Légère marge à droite */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ajoute une ombre pour mieux voir la bordure */
         }
-
     </style>
 </head>
 <body>
@@ -71,6 +89,7 @@
         <!-- Conteneur du bouton à gauche -->
         <div class="container">
             <a class="button OnTop" href="">On Top</a> <!-- Bouton qui renvoie à la même page -->
+            <a class="button-small" href="">1.8.9 PVP</a> <!-- Nouveau bouton "1.8.9 PVP" en dessous -->
         </div>
 
         <!-- Bannière à droite -->
