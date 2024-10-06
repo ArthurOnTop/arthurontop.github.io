@@ -23,25 +23,30 @@
         .button {
             font-family: Impact, sans-serif;
             text-decoration: none; /* Pas de soulignement */
-            display: block; /* Prend toute la largeur disponible */
-            padding: 0.5rem 1rem; /* Espacement interne réduit */
+            display: flex; /* Utilise flexbox pour centrer le texte */
+            justify-content: center; /* Centre horizontalement */
+            align-items: center; /* Centre verticalement */
+            padding: 0; /* Enlève le padding pour mieux contrôler la taille */
             width: 100%; /* Prend toute la largeur du conteneur parent */
             box-sizing: border-box; /* Inclut le padding dans la largeur */
             cursor: pointer; /* Change le curseur au survol */
             background-color: transparent; /* Fond transparent */
             border: none; /* Pas de bordure visible */
-            text-align: left; /* Aligne le texte à gauche */
+            height: 90%; /* Hauteur du bouton */
+            line-height: 1.2; /* Hauteur de ligne pour centrer le texte */
+            font-size: 90%; /* Ajuste la taille de la police pour remplir 90% du bouton */
         }
 
         .OnTop {
             font-size: 3vw; /* Taille de la police adaptative */
             color: red; /* Texte en rouge */
+            width: 90%; /* Remplit 90% de la largeur du bouton */
         }
 
         .Subtitle {
             font-size: 1.5vw; /* Taille de la police adaptative */
             color: #dfdfdf; /* Couleur du sous-titre */
-            text-indent: -0.5rem; /* Décale légèrement le texte vers la gauche */
+            width: 90%; /* Remplit 90% de la largeur du bouton */
         }
 
         .banner {
