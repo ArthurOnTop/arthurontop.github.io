@@ -9,9 +9,10 @@
             margin: 0; /* Enlève les marges par défaut du body */
             height: 100vh; /* Prend toute la hauteur de la fenêtre */
             background-color: #1B1B1B; /* Couleur de fond */
-            display: flex; /* Utilise flexbox pour la mise en page */
-            justify-content: flex-start; /* Place les éléments en haut */
-            align-items: flex-start; /* Aligne les éléments en haut à gauche */
+            display: flex;
+            flex-direction: column; /* Aligne les éléments verticalement */
+            justify-content: flex-start;
+            align-items: flex-start;
         }
 
         .container {
@@ -49,6 +50,21 @@
             margin-left: 0; /* Pas de marge à gauche */
             margin-top: 0; /* Pas de marge au-dessus de la bannière */
         }
+
+        .rectangle {
+            width: calc(80% * 1.05); /* Largeur égale à celle de la bannière */
+            background-color: #131314; /* Couleur de fond du rectangle */
+            border-radius: 20px 20px 0 0; /* Bords arrondis en haut seulement */
+            height: calc(100vh - ((80vw * 1.05) / 12)); /* Remplit le reste de la hauteur de la page */
+            margin-top: 0; /* Pas de marge au-dessus du rectangle */
+            position: relative; /* Permet d'ajouter des éléments sans affecter la mise en page */
+        }
+
+        .content {
+            padding: 1rem; /* Espace intérieur du rectangle pour ajouter des éléments */
+            color: white; /* Couleur du texte à l'intérieur */
+            font-family: Arial, sans-serif;
+        }
     </style>
 </head>
 <body>
@@ -58,6 +74,13 @@
     </div>
     
     <div class="banner"></div> <!-- Bannière -->
+    
+    <div class="rectangle">
+        <div class="content">
+            <!-- Ajoute ici le contenu que tu veux, comme du texte, des images, des formulaires, etc. -->
+            <p>Ceci est un espace de contenu à l'intérieur du rectangle.</p>
+        </div>
+    </div>
 
 </body>
 </html>
