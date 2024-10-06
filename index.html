@@ -20,7 +20,7 @@
             padding: 0; /* Enlève le padding par défaut */
         }
 
-        .OnTop, .Subtitle {
+        .button {
             font-family: Impact, sans-serif;
             text-decoration: none; /* Pas de soulignement */
             display: block; /* Prend toute la largeur disponible */
@@ -30,6 +30,7 @@
             cursor: pointer; /* Change le curseur au survol */
             background-color: transparent; /* Fond transparent */
             border: none; /* Pas de bordure visible */
+            text-align: left; /* Aligne le texte à gauche */
         }
 
         .OnTop {
@@ -45,20 +46,27 @@
 
         .banner {
             width: 80%; /* Largeur de la bannière (remplit le reste de la page) */
-            height: 8.5vh; /* Hauteur totale de la bannière */
+            position: relative; /* Position relative pour le padding */
             background-image: url('banner.png'); /* Chemin de l'image de la bannière */
             background-size: cover; /* Couvre toute la largeur et la hauteur */
             background-position: center; /* Centre l'image */
             margin-left: 0; /* Pas de marge à gauche */
             margin-top: 0; /* Pas de marge au-dessus de la bannière */
+            padding-top: 25%; /* Ajuster ce pourcentage selon l'aspect ratio de l'image */
+        }
+        
+        .banner::after {
+            content: ""; /* Contenu vide pour créer un bloc */
+            display: block; /* Affiche le bloc */
+            padding-bottom: 100%; /* Maintient le ratio 1:1 */
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <button class="OnTop">On Top</button>
-        <button class="Subtitle">Custom Minecraft</button>
+        <a class="button OnTop" href="https://arthurontop.github.io" target="_blank">On Top</a>
+        <a class="button Subtitle" href="https://arthurontop.github.io" target="_blank">Custom Minecraft</a>
     </div>
     
     <div class="banner"></div> <!-- Bannière -->
