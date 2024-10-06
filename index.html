@@ -46,10 +46,10 @@
 
         .banner {
             width: 80%; /* Largeur de la bannière (remplit 4/5 de la page) */
-            height: 8vh; /* Hauteur de la bannière alignée à celle des boutons */
+            height: auto; /* Hauteur auto pour s'ajuster au contenu */
+            padding-top: 10%; /* Ajuste cette valeur selon l'aspect ratio de l'image */
             background-image: url('banner.png'); /* Chemin de l'image de la bannière */
-            background-size: contain; /* Contient l'image dans la bannière */
-            background-repeat: no-repeat; /* Pas de répétition de l'image */
+            background-size: cover; /* Couvre entièrement le conteneur */
             background-position: center; /* Centre l'image */
             margin-left: 0; /* Pas de marge à gauche */
             margin-top: 0; /* Pas de marge au-dessus de la bannière */
