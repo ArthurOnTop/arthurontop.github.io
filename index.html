@@ -9,10 +9,10 @@
             margin: 0; /* Enlève les marges par défaut du body */
             height: 100vh; /* Prend toute la hauteur de la fenêtre */
             background-color: #1B1B1B; /* Couleur de fond */
-            display: flex;
+            display: flex; /* Utilise flexbox pour la mise en page */
             flex-direction: column; /* Aligne les éléments verticalement */
-            justify-content: flex-start;
-            align-items: flex-start;
+            justify-content: flex-start; /* Place les éléments en haut */
+            align-items: flex-start; /* Aligne les éléments en haut à gauche */
         }
 
         .container {
@@ -47,7 +47,7 @@
             background-size: cover; /* Couvre entièrement le conteneur */
             background-position: center; /* Centre l'image */
             background-repeat: no-repeat; /* Empêche la répétition de l'image */
-            margin-left: auto; /* Aligne la bannière à droite */
+            margin-left: 0; /* Pas de marge à gauche */
             margin-top: 0; /* Pas de marge au-dessus de la bannière */
         }
 
@@ -55,8 +55,12 @@
             width: calc(80% * 1.05); /* Largeur égale à celle de la bannière */
             background-color: #131314; /* Couleur de fond du rectangle */
             border-radius: 20px 20px 0 0; /* Bords arrondis en haut seulement */
-            height: calc(100vh - ((80vw * 1.05) / 12)); /* Remplit le reste de la hauteur de la page */
-            margin-left: auto; /* Aligne le rectangle à droite */
+            height: 100%; /* Remplit le reste de la hauteur de la page */
+            margin-left: 0; /* Aligne le rectangle directement sous la bannière */
+            margin-top: 0; /* Pas de marge entre la bannière et le rectangle */
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: relative; /* Permet d'ajouter des éléments sans affecter la mise en page */
         }
 
