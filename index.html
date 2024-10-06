@@ -45,20 +45,14 @@
         }
 
         .banner {
-            width: 80%; /* Largeur de la bannière (remplit le reste de la page) */
-            position: relative; /* Position relative pour le padding */
+            width: 80%; /* Largeur de la bannière (remplit 4/5 de la page) */
+            height: 8vh; /* Hauteur de la bannière alignée à celle des boutons */
             background-image: url('banner.png'); /* Chemin de l'image de la bannière */
-            background-size: cover; /* Couvre toute la largeur et la hauteur */
+            background-size: contain; /* Contient l'image dans la bannière */
+            background-repeat: no-repeat; /* Pas de répétition de l'image */
             background-position: center; /* Centre l'image */
             margin-left: 0; /* Pas de marge à gauche */
             margin-top: 0; /* Pas de marge au-dessus de la bannière */
-            padding-top: 25%; /* Ajuster ce pourcentage selon l'aspect ratio de l'image */
-        }
-        
-        .banner::after {
-            content: ""; /* Contenu vide pour créer un bloc */
-            display: block; /* Affiche le bloc */
-            padding-bottom: 100%; /* Maintient le ratio 1:1 */
         }
     </style>
 </head>
