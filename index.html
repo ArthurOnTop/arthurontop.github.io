@@ -18,7 +18,8 @@
             width: 16.66%; /* Largeur du conteneur pour les boutons (1/6 de la page) */
             display: inline-block; /* Affichage en ligne pour ne pas décaler la bannière */
             margin: 0; /* Enlève la marge autour du conteneur */
-            padding-top: 10px; /* Ajoute un peu d'espace en haut pour le conteneur */
+            padding: 0; /* Enlève le padding autour du conteneur */
+            height: auto; /* Permet au conteneur de s'ajuster à la hauteur de son contenu */
         }
 
         /* Style du bouton principal */
@@ -37,6 +38,7 @@
             line-height: calc((80vw * 1.05) / 12); /* Centre verticalement le texte */
             font-size: calc(1.5vw * 3.5);
             color: red; /* Couleur du texte du bouton "On Top" */
+            margin: 0; /* Supprime toute marge autour du bouton */
         }
 
         /* Style du bouton "1.8.9 PVP" */
