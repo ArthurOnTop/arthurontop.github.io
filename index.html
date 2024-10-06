@@ -16,7 +16,7 @@
 
         .container {
             width: 20%; /* Largeur de 20% pour le bouton */
-            height: calc(100vh / 7); /* Hauteur du conteneur limitée à 1/7 de la hauteur de la page */
+            height: auto; /* La hauteur du conteneur s'adapte au contenu */
         }
 
         .button {
@@ -25,20 +25,20 @@
             display: block; /* Prend toute la largeur disponible */
             padding: 0; /* Pas d'espacement interne */
             width: 100%; /* Prend toute la largeur du conteneur parent */
-            height: 100%; /* Le bouton prend toute la hauteur du conteneur (1/7 de la hauteur de la page) */
+            height: calc((80vw * 1.05) / 12); /* La hauteur du bouton égale celle de l'image */
             box-sizing: border-box; /* Inclut le padding dans la largeur */
             cursor: pointer; /* Change le curseur au survol */
             background-color: transparent; /* Fond transparent */
             border: none; /* Pas de bordure visible */
             text-align: center; /* Centre le texte dans le bouton */
-            line-height: calc(100vh / 7); /* Centre verticalement le texte */
+            line-height: calc((80vw * 1.05) / 12); /* Centre verticalement le texte */
             font-size: calc(1.5vw * 3.5); /* Taille de police augmentée pour le texte dans le bouton */
             color: red; /* Couleur du texte en rouge */
         }
 
         .banner {
             width: calc(80% * 1.05); /* Largeur de la bannière (remplit 4/5 de la page + 5%) */
-            height: calc((80vw * 1.05) / 11); /* Hauteur de 1/11 de la largeur de la bannière */
+            height: calc((80vw * 1.05) / 12); /* Hauteur de 1/12 de la largeur de la bannière */
             background-image: url('banner.png'); /* Chemin de l'image de la bannière */
             background-size: cover; /* Couvre entièrement le conteneur */
             background-position: center; /* Centre l'image */
