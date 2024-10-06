@@ -53,13 +53,14 @@
 
         /* Rectangle esthétique sous la bannière */
         .rectangle {
-            width: calc(80% * 1.05 - 20px); /* Réduit la largeur du rectangle */
-            height: 100%; /* Occupe tout l'espace restant en bas */
+            width: calc(80% * 1.05 - 40px); /* Réduit la largeur du rectangle */
+            height: calc((80vw * 1.05) / 12 - 20px); /* Réduit la hauteur du rectangle */
             background-color: #131314; /* Couleur du rectangle */
             border-radius: 20px 20px 0 0; /* Bords arrondis en haut */
             margin-left: auto; /* Aligné à droite, en dessous de la bannière */
-            margin-top: -20px; /* Décale légèrement le rectangle vers le haut */
+            margin-top: -10px; /* Décale légèrement le rectangle vers le haut */
             margin-right: 10px; /* Décale légèrement le rectangle à gauche */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ajoute une ombre pour mieux voir la bordure */
         }
 
     </style>
