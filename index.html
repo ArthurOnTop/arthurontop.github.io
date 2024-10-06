@@ -7,18 +7,16 @@
     <style>
         body {
             margin: 0; /* Enlève les marges par défaut du body */
-            display: flex; /* Utilise flexbox pour la mise en page */
-            flex-direction: row; /* Organise les éléments en ligne */
             height: 100vh; /* Prend toute la hauteur de la fenêtre */
             background-color: #1B1B1B; /* Couleur de fond */
+            display: flex; /* Utilise flexbox pour la mise en page */
+            justify-content: flex-start; /* Place les éléments en haut */
+            align-items: flex-start; /* Aligne les éléments en haut à gauche */
         }
 
         .container {
-            display: flex; /* Utilise flexbox pour le conteneur des boutons */
-            flex-direction: column; /* Colonne pour les éléments dans le conteneur */
-            width: 20%; /* Largeur de 20% pour les boutons */
-            padding: 0; /* Enlève le padding par défaut */
-            align-items: flex-start; /* Aligne le contenu à gauche */
+            width: 20%; /* Largeur de 20% pour le bouton */
+            height: calc(100vh / 7); /* Hauteur du conteneur limitée à 1/7 de la hauteur de la page */
         }
 
         .button {
@@ -27,23 +25,15 @@
             display: block; /* Prend toute la largeur disponible */
             padding: 0; /* Pas d'espacement interne */
             width: 100%; /* Prend toute la largeur du conteneur parent */
+            height: 100%; /* Le bouton prend toute la hauteur du conteneur (1/7 de la hauteur de la page) */
             box-sizing: border-box; /* Inclut le padding dans la largeur */
             cursor: pointer; /* Change le curseur au survol */
             background-color: transparent; /* Fond transparent */
             border: none; /* Pas de bordure visible */
             text-align: center; /* Centre le texte dans le bouton */
-            height: calc(100vh / 7); /* Hauteur du bouton à 1/7 de la hauteur de la page */
-            line-height: calc(100vh / 7); /* Centre le texte verticalement */
-            font-size: calc(1.5vw * 3); /* Taille de police augmentée pour le texte dans le bouton */
-        }
-
-        .OnTop {
-            color: red; /* Texte en rouge */
-            height: 100%; /* Prend toute la hauteur du conteneur */
-            display: flex; /* Utilise flexbox pour centrer le texte */
-            justify-content: center; /* Centre horizontalement */
-            align-items: center; /* Centre verticalement */
-            flex-grow: 1; /* Permet au bouton de prendre tout l'espace disponible */
+            line-height: calc(100vh / 7); /* Centre verticalement le texte */
+            font-size: calc(1.5vw * 3.5); /* Taille de police augmentée pour le texte dans le bouton */
+            color: red; /* Couleur du texte en rouge */
         }
 
         .banner {
@@ -55,20 +45,12 @@
             margin-left: 0; /* Pas de marge à gauche */
             margin-top: 0; /* Pas de marge au-dessus de la bannière */
         }
-
-        /* Ajout d'un style pour un élément en dessous du bouton */
-        .other-element {
-            color: white; /* Couleur du texte */
-            font-size: 1.5vw; /* Taille de police pour le texte */
-            margin-top: 10px; /* Espacement au-dessus */
-        }
     </style>
 </head>
 <body>
 
     <div class="container">
         <a class="button OnTop" href="index.html">On Top</a> <!-- Renvoie à la même page -->
-        <div class="other-element">Autre élément en dessous du bouton</div> <!-- Un exemple d'élément ajouté -->
     </div>
     
     <div class="banner"></div> <!-- Bannière -->
